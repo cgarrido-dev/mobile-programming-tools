@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CG Cars</string>
+    <string name="transport_image_desc">Imagen de transporte</string>
+</resources>

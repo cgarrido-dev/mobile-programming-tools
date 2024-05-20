@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/buttonAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Animación" />
+
+    <Button
+        android:id="@+id/buttonVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Video"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonDrivers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Conductores Destacados"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonCapturePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Capturar Foto"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonGraph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Gráfico"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

@@ -5,13 +5,13 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import android.widget.Button
 
-class ImagenAdapter(private val context: Context, private val listaImagenes: List<Imagen>) :
+class ImagenAdapter(private val context: Context, private var listaImagenes: List<Imagen>) :
     RecyclerView.Adapter<ImagenAdapter.ImagenViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImagenViewHolder {
@@ -31,12 +31,16 @@ class ImagenAdapter(private val context: Context, private val listaImagenes: Lis
 
     override fun getItemCount() = listaImagenes.size
 
+    fun actualizarLista(nuevaLista: List<Imagen>) {
+        listaImagenes = nuevaLista
+        notifyDataSetChanged()
+    }
+
     private fun mostrarDialog(url: String) {
         val dialog = Dialog(context)
         dialog.setContentView(R.layout.dialog_imagen)
         val dialogImageView = dialog.findViewById<ImageView>(R.id.dialogImageView)
         val closeButton = dialog.findViewById<Button>(R.id.closeButton)
-
         Glide.with(context).load(url).into(dialogImageView)
 
         closeButton.setOnClickListener {
